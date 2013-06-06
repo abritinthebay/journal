@@ -1,0 +1,30 @@
+{
+  "name": "journal",
+  "version": "0.0.1",
+  "description": "Journal is a node JS blogging platform strongly influenced by WordPress and LiveJournal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abritinthebay/journal.git"
+  },
+  "keywords": [
+    "blogging",
+    "journal",
+    "blog",
+    "website",
+    "app"
+  ],
+  "author": {
+    name: "Gregory Wild-Smith",
+    email: "gregory@wild-smith.com",
+    url: "http://wild-smith.com",
+  },
+  "license": "GPLv2"
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/abritinthebay/journal/issues"
+  }
+}
