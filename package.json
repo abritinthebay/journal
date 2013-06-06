@@ -17,12 +17,16 @@
     "publishing"
   ],
   "author": "Gregory Wild-Smith <gregory@wild-smith.com> (http://wild-smith.com)",
+  "license": "GPLv2 (or later)",
   "licenses": [
     {
       "type": "GPLv2 (or later)",
       "url": "http://www.gnu.org/licenses/gpl-2.0-standalone.html"
     }
   ],
+  "dependencies": {
+    "rendr": "~0.4.7-rc.2"
+  },
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/abritinthebay/journal/issues"
