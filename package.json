@@ -25,7 +25,4 @@
   "bugs": {
     "url": "https://github.com/abritinthebay/journal/issues"
   }
-  "engines": {
-    "node": ">=0.10"
-  }
 }
