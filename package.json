@@ -1,11 +1,8 @@
 {
   "name": "journal",
   "version": "0.0.1",
-  "description": "Journal is a node JS blogging platform strongly influenced by WordPress and LiveJournal",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Journal is a NodeJS blogging and content management platform strongly influenced by WordPress and LiveJournal",
+  "main": "./lib/journal.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/abritinthebay/journal.git"
@@ -17,14 +14,18 @@
     "website",
     "app"
   ],
-  "author": {
-    name: "Gregory Wild-Smith",
-    email: "gregory@wild-smith.com",
-    url: "http://wild-smith.com",
-  },
-  "license": "GPLv2"
+  "author": "Gregory Wild-Smith <gregory@wild-smith.com> (http://wild-smith.com)",
+  "licenses": [
+    {
+      "type": "GPLv2 (or later)",
+      "url": "http://www.gnu.org/licenses/gpl-2.0-standalone.html", 
+    }
+  ],
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/abritinthebay/journal/issues"
+  }
+  "engines": {
+    "node": ">=0.10"
   }
 }
