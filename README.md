@@ -1,0 +1,3 @@
+# Journal: A Blog Tool & Publishing Platform for NodeJS
+
+coming soon...

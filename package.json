@@ -1,6 +1,6 @@
 {
   "name": "journal",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "description": "Journal is a NodeJS blogging and content management platform strongly influenced by WordPress and LiveJournal",
   "main": "./lib/journal.js",
   "repository": {
@@ -12,7 +12,9 @@
     "journal",
     "blog",
     "website",
-    "app"
+    "app",
+    "cms",
+    "publishing"
   ],
   "author": "Gregory Wild-Smith <gregory@wild-smith.com> (http://wild-smith.com)",
   "licenses": [
