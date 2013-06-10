@@ -25,7 +25,9 @@
     }
   ],
   "dependencies": {
-    "rendr": "~0.4.7-rc.2"
+    "rendr": "~0.4.7-rc.2",
+    "connect-ensure-login": "~0.1.1",
+    "passport": "~0.1.17"
   },
   "readmeFilename": "README.md",
   "bugs": {
