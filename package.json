@@ -26,10 +26,24 @@
   ],
   "dependencies": {
     "connect-ensure-login": "~0.1.1",
-    "passport": "~0.1.17"
+    "passport": "~0.1.17",
+    "consolidate": "~0.9.1",
+    "async": "~0.2.9",
+    "q": "~0.9.6",
+    "jugglingdb": "~0.2.0-35",
+    "jugglingdb-mongodb": "0.0.4-3",
+    "handlebars": "~1.0.12",
+    "underscore": "~1.4.4",
+    "backbone": "~1.0.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/abritinthebay/journal/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.11.0",
+    "chai": "~1.7.1",
+    "chai-as-promised": "~3.3.1",
+    "mocha-as-promised": "~1.4.0"
   }
 }
