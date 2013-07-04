@@ -1,1 +1,22 @@
-This is some header content
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{journal.title}}</title>
+	<meta name="resource-type" content="document" />
+	<meta name="description" content="{{journal.meta.description}}">
+	<meta name="copyright" content="{{journal.meta.copyright}}}" />
+	{{if journal.opengraph}}
+		<meta property="og:title" content="{{journal.current.title}}"/>
+		<meta property="og:url" content="{{journal.current.url}}"/>
+		<meta property="og:type" content="{{journal.og.type}}"/>
+		<meta property="og:description" content="{{journal.current.description}}"/>
+	{{/if}}
+	{{if journal.twittercard}}
+		<meta name="twitter:card" content="{{journal.twittercard.type}}"/>
+		<meta name="twitter:url" content="{{journal.current.url}}"/>
+		<meta name="twitter:title" content="{{journal.current.title}}"/>
+		<meta name="twitter:description" content="{{journal.current.description}}"/>
+		<meta name="twitter:creator" content="{{journal.current.author.twitter}}"/>
+	{{/if}}
+</head>
+<body>
