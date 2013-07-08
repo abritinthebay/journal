@@ -14,7 +14,7 @@
 ## Getting Started
 
 The first step is installing journal, this is trivially easy as it's available as an NPM module:
->	npm install journal
+	npm install journal
 
 ## Minimal Example
 
@@ -29,6 +29,6 @@ Journal is designed to be really *really* simple to get running. Your entire ser
 	app.listen(3000);
 ```
 
-Here we are using Express as the webserver. Express is currently the only supported node webserver but support is planned for more (and has been designed into the app). The [default settings](config/config.js)
+Here we are using Express as the webserver. Express is currently the only supported node webserver but support is planned for more (and has been designed into the app). The [default settings](config/config.js) can be easily overridden but Journal will assume Express and MongoDB are the technologies you'll be using if you don't change them.
 
-It's also very easy to write your own adapters for other servers or databases - fork this project and submit a merge request for your server adapter.
+It's extremely easy to write your own adapters for other servers or databases - fork this project and submit a merge request for your server adapter.
