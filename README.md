@@ -1,4 +1,4 @@
-# Journal: A Blog Tool & Publishing Platform for NodeJS
+# Journal: A Personal Publishing Platform
 
 > **Journal**. \ˈjər-nəl\ _Noun_. Definition: chronicle, account, narrative, _life_.
 
@@ -26,12 +26,14 @@ Journal is designed to be really *really* simple to get running. Your entire ser
 	app.listen(3000);
 ```
 
-The [default settings](config/config.js) can be easily overridden but Journal will assume Express and MongoDB are the technologies you'll be using if you don't change them. Express and Mongo are currently the only supported technologies but support is planned for more via *adapters*. 
+The [default settings](config/config.js) can be easily overridden but Journal will assume Express and MongoDB are the technologies you'll be using if you don't change them. Express is currently the only supported web server but support can be added for more via *adapters*.
 
 ## Databases
 
-Journal uses [Caminte](https://github.com/biggora/caminte) behind the scenes for talking to databases. A complete and up-to-date list is available at that project but as of this writing this means Journal supports:
-> mongodb, mysql, sqlite3, redis, couchdb, postgres, riak, mongoose, neo4j, firebird, nano
+Journal is largely database independent as it uses [Caminte](https://github.com/biggora/caminte) behind the scenes for talking for communication.
+
+A complete and up-to-date list of supported databases is available at that project but as of this writing this means Journal supports:
+> mongodb, mysql, redis, couchdb, postgres, sqlite3, riak, mongoose, neo4j, firebird, nano
 
 ## Adapters
 
@@ -39,6 +41,8 @@ Adapters are code that provides a way for Journal to speak to different routing 
 
 Currently Journal ships with only one adapter: Express. The roadmap includes support for more (node's http module for example) but it's extremely easy to write your own adapters - fork this project and submit a merge request for your favorite server adapter!
 
+#License and Copyright
+Journal is licensed under the GPL v2 (or later) and is Copyright © 2013 Gregory Wild-Smith 
 
 # Meta
 [![Build Status](https://api.travis-ci.org/abritinthebay/journal.png)](https://travis-ci.org/abritinthebay/journal)  
