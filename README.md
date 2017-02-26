@@ -17,7 +17,7 @@ Assuming you have [NodeJS](http://nodejs.org) installed already then the first s
 	npm install journal
 ```
 
-#License and Copyright
+# License and Copyright
 Journal is licensed under the MIT licence and is Copyright © 2013-2017 Gregory Wild-Smith.
 
 # Meta
