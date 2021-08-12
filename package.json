@@ -1,6 +1,6 @@
 {
   "name": "journal",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Journal is a NodeJS blogging platform designed to work with Markdown",
   "repository": {
     "type": "git",
