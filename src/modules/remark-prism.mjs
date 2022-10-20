@@ -1,4 +1,4 @@
-import Refractor from "refractor";
+import { refractor } from "refractor";
 import { visit } from "unist-util-visit";
 
 const textNode = (value = "") => ({ type: "text", value });
@@ -24,7 +24,7 @@ const getNodeFuncs = node => ({
 	nodeIsToken: isToken(node)
 });
 
-const wrapNode = (nodes, skip) => (index = 0) => skip ? nodes : nodes.splice(index, 0, index > 0 ? lineEndNode : lineStartNode);
+const wrapNode = (nodes, skip) => (index = 0) => skip ? nodes : nodes.children.splice(index, 0, index > 0 ? lineEndNode : lineStartNode);
 
 function addLines(nodes, skipWrapping = false){
 	const wrapAt = wrapNode(nodes, skipWrapping);
@@ -189,9 +189,9 @@ const prismNodeData = node => node ? {
 
 const codeVisitor = node => {
 	node.data = prismNodeData(node);
-	node.data.hChildren = Refractor.highlight(node.value, node.lang || "js");
+	node.data.hChildren = refractor.highlight(node.value, node.lang || "js");
 	delete node.value;
-	node.data.hChildren.forEach(child => {
+	node.data.hChildren.children.forEach(child => {
 		if (child.properties) {
 			const props = child.properties;
 			if (props.className.includes("keyword")) {
