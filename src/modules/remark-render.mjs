@@ -192,6 +192,7 @@ const DUMB_HAST_TO_HTML_REPLACEMENT = "%%%%_REPLACE_WITH_AMP_%%%%";
 const HAST_REPLACEMENT_REGEX = new RegExp(DUMB_HAST_TO_HTML_REPLACEMENT, "g");
 
 const codeTest = elem => elem.tagName === "span" && elem.properties.className && elem.properties.className.includes("token") && elem.properties.className.includes("punctuation");
+
 const prepCodePunctuation = hast => visit(hast, codeTest, token => {
 	switch (token.children[0].value) {
 		case "<!":

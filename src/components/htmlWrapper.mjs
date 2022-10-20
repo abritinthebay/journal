@@ -126,8 +126,6 @@ ${pages.reduce((output, page) => `${output}${page.type !== "subpage" ? `<li><a h
 </ul>` : ""}
 </header>`;
 
-const bodyClass = (classGenerator, frontmatter) => `class="${frontmatter && frontmatter.type || "index"} ${classGenerator && typeof classGenerator === "function" && classGenerator(frontmatter)}"`;
-
 /*
  * Mapping from Frontmatter to Meta Data fields.
  *
@@ -175,7 +173,7 @@ const template = props => {
 	return `<!DOCTYPE html>
 <html ${toHTMLAttrs(context.htmlAttributes)}>
 	${head(context)}
-	<body ${bodyClass(config.classes, frontmatter)}>
+	<body class="${frontmatter && frontmatter.type || "index"}">
 		${siteheader(props)}
 		<main>
 			${html}
