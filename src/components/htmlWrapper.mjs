@@ -179,7 +179,7 @@ const template = props => {
 			${html}
 		</main>
 		<footer id="sitefooter">
-			<p>&copy; ${config.since ? `${config.since}&emdash;` : ""}${new Date().getFullYear()}, ${config.copyright}.  All rights reserved.</p>
+			<p>&copy; ${config.since ? `${config.since}–` : ""}${new Date().getFullYear()} ${config.copyright}.  All rights reserved.</p>
 		</footer>
 		${context.bodyLink}
 	</body>
