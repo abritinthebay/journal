@@ -371,8 +371,8 @@
 		"symbol-description": 2,
 		"template-curly-spacing": 0,
 		"yield-star-spacing": 2,
-		
-		"simple-import-sort/sort": 2,
+		"simple-import-sort/imports": 1,
+		"simple-import-sort/exports": 1,
 		"promise/always-return": 2,
 		"promise/no-return-wrap": 2,
 		"promise/param-names": 2,
