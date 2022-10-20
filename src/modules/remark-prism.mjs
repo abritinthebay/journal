@@ -1,5 +1,5 @@
 import Refractor from "refractor";
-import visit from "unist-util-visit";
+import { visit } from "unist-util-visit";
 
 const textNode = (value = "") => ({ type: "text", value });
 const spanNode = (classNames = [], value = "") => ({

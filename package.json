@@ -50,10 +50,10 @@
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
-    "hast-util-sanitize": "^3.0.0",
-    "hast-util-to-html": "^7.1.1",
+    "hast-util-sanitize": "^4.0.0",
+    "hast-util-to-html": "^8.0.3",
     "html-minifier": "^4.0.0",
-    "mdast-util-to-hast": "^9.1.0",
+    "mdast-util-to-hast": "^12.1.4",
     "postcss": "^7.0.36",
     "postcss-preset-env": "^6.7.0",
     "precss": "^4.0.0",
@@ -65,11 +65,11 @@
     "remark-frontmatter": "^2.0.0",
     "remark-sectionize": "^1.1.1",
     "remark-slug": "^6.0.0",
-    "unist-builder": "^2.0.3",
-    "unist-util-remove": "^2.0.0",
-    "unist-util-select": "^3.0.1",
-    "unist-util-visit": "^2.0.3",
-    "yaml": "^1.10.2"
+    "unist-builder": "^3.0.0",
+    "unist-util-remove": "^3.1.0",
+    "unist-util-select": "^4.0.1",
+    "unist-util-visit": "^4.1.1",
+    "yaml": "^2.1.3"
   },
   "devDependencies": {
     "depcheck": "^1.4.2",

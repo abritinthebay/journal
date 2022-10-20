@@ -1,8 +1,8 @@
-import sanitize from "hast-util-sanitize";
-import toHtml from "hast-util-to-html";
-import toHAST from "mdast-util-to-hast";
-import unist from "unist-builder";
-import visit from "unist-util-visit";
+import { sanitize } from "hast-util-sanitize";
+import { toHtml } from "hast-util-to-html";
+import { toHast } from "mdast-util-to-hast";
+import { u as unist } from "unist-builder";
+import { visit } from "unist-util-visit";
 
 /*
  * Image Constants
@@ -77,7 +77,7 @@ function footnoteReference(hast, node){
 					"className": ["footnote-ref"],
 					"ariaLabel": `footnote ${footnotePosition}`
 				},
-				[unist("text", footnotePosition)]
+				[unist("text", `${footnotePosition}`)]
 			)
 		]
 	);
@@ -244,7 +244,7 @@ function HTML(options){
 
 	function compiler(node, file){
 		const isRoot = node && node.type && node.type === "root";
-		let hast = toHAST(node, toHastOptions);
+		let hast = toHast(node, toHastOptions);
 
 		if (file.extname) {
 			file.extname = ".html";

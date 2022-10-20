@@ -1,11 +1,9 @@
-import remove from "unist-util-remove";
-import utilSelect from "unist-util-select";
+import { remove } from "unist-util-remove";
+import { select } from "unist-util-select";
 import yaml from "yaml";
 
 import slugify from "./slugify.mjs";
 import titleCase from "./title-case.mjs";
-
-const { select } = utilSelect;
 
 const addToYAML = (ast, title, slug) => {
 	const yamlNode = select("yaml", ast);

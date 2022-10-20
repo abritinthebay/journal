@@ -1,5 +1,5 @@
-import remove from "unist-util-remove";
-import visit from "unist-util-visit";
+import { remove } from "unist-util-remove";
+import { visit } from "unist-util-visit";
 import YAML from "yaml";
 
 const pad = num => num < 10 ? `0${num}` : `${num}`;
