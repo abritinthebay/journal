@@ -72,7 +72,7 @@ const getArchiveContent = ([PAGES, POSTS, frontmatter = {}, config]) => {
 	if (isArrayWithContent(POSTS)) {
 		let latest = { year: Number.MAX_SAFE_INTEGER, month: Number.MAX_SAFE_INTEGER, day: Number.MAX_SAFE_INTEGER };
 		const longDateFormat = { month: "long", year: "numeric" };
-		const shortDateFormat = { year: "numeric", month: "short", day: "numeric" };
+		const shortDateFormat = { month: "short", day: "numeric" };
 		const pages = getPageList(PAGES);
 		const content = `<dl id="archive">
 		${POSTS.flatMap(post => {
@@ -81,7 +81,7 @@ const getArchiveContent = ([PAGES, POSTS, frontmatter = {}, config]) => {
 			}
 			const date = new Date(post.frontmatter.date);
 			const current = getYMD(date);
-			const subtitle = dateLine({ date, shortDateFormat, key: date.getTime() });
+			const subtitle = dateLine({ date, format: shortDateFormat, key: date.getTime() });
 			const titleContent = title({
 				date,
 				frontmatter: post.frontmatter,
@@ -95,7 +95,7 @@ const getArchiveContent = ([PAGES, POSTS, frontmatter = {}, config]) => {
 
 			if (latest.year > current.year || latest.year === current.year && Number(latest.month) > Number(current.month)) {
 				latest = current;
-				return [`<dt key="${date.getTime()}">${dateLine({ accuracy: "month", date, longDateFormat })}</dt>`, titleContent];
+				return [`<dt key="${date.getTime()}">${dateLine({ accuracy: "month", date, format: longDateFormat })}</dt>`, titleContent];
 			}
 
 			return titleContent;
