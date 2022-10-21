@@ -44,11 +44,11 @@ You can also install the binary globally like so:
 
 ## Examples:
 ```
-$ journal								Basic usage, uses defaults
-$ journal --config myconfig.json		Use a custom config file
-$ journal -i '../custom/dir'			Use a custom content directory
-$ journal view							Start a server for built content
-$ journal view --config myconfig.json	Start server with a custom config
+$ journal                               Basic usage, uses defaults
+$ journal --config myconfig.json        Use a custom config file
+$ journal -i '../custom/dir'            Use a custom content directory
+$ journal view                          Start a server for built content
+$ journal view --config myconfig.json   Start server with a custom config
 ```
 # License
 Journal is licensed under the Apache License 2.0, which is available in the LICENCE.md file.
