@@ -14,33 +14,33 @@ It's small, simple, and fast!
 Assuming you have [NodeJS](http://nodejs.org) installed already then you can just run journal directly through `npx`.
 
 ```Shell
-	npx journal
+  npx journal
 ```
 
 You can also install the binary globally like so:
 
 ```Shell
-	npm i -g journal
+  npm i -g journal
 ```
 ## Usage
 
 `journal [command] [args]`
 
 ### Commands
-`journal build` - builds a journal
-`journal serve` - starts a httpserver locally to serve any content [aliases: view]
+ * `journal build` - builds a journal
+ * `journal serve` - starts a httpserver locally to serve any content [aliases: view]
 
 ### Config Arguments (which can be overriden):
-`-c, --config [default: <current dir>/journal.json]
+ * `-c, --config [default: <current dir>/journal.json]
 
 ### Directory Arguments: (overrides config)
-`-i, --input, --content` Location of markdown to be parsed [default: <current dir>/content/]
-`-o, --output` Location to output generated html [default: <current dir>/build/]
-`-s, --static` Location of static files (css, images, etc) [default: <current dir>/static/]
+ * `-i, --input, --content` Location of markdown to be parsed [default: <current dir>/content/]
+ * `-o, --output` Location to output generated html [default: <current dir>/build/]
+ * `-s, --static` Location of static files (css, images, etc) [default: <current dir>/static/]
 
 ### Other Arguments
-`-v, --version` Show version number [boolean]
-`-h, --help` Show help [boolean]
+ * `-v, --version` Show version number [boolean]
+ * `-h, --help` Show help [boolean]
 
 ## Examples:
 ```
