@@ -87,7 +87,11 @@ const DEFAULT_OPTIONS = {
 const getFileNamesFromPath = async filePath => (await fs.readdir(filePath)).map(name => filePath + name);
 const processFilesFromPath = (POSTS, PAGES, opts) => async filePath => {
 	const files = await getFileNamesFromPath(filePath);
-	return Promise.all(files.map(processFile(POSTS, PAGES, opts)));
+	const processor = processFile(POSTS, PAGES, opts);
+	return Promise.all(files.map(file => {
+		process.stdout.write(".");
+		return processor(file);
+	}));
 };
 
 let getAllPosts = () => ({});
@@ -100,7 +104,7 @@ const build = async(userOpts = {}) => {
 	// Step One: process files into DATED_POSTS and PAGES
 	const DATED_POSTS = {};
 	const PAGES = {};
-
+	process.stdout.write("\nProcessing");
 	const markA = Date.now();
 	await Promise.all(opts.contentPaths.map(processFilesFromPath(DATED_POSTS, PAGES, opts.config)));
 
@@ -119,8 +123,11 @@ const build = async(userOpts = {}) => {
 		]);
 	}
 	const markB = Date.now();
-	// eslint-disable-next-line no-console
-	console.log(`Built ${ORDERED_POSTS.length} Posts & ${Object.keys(PAGES).length} Pages in ${(markB - markA) / MILLISECONDS} seconds`);
+	return {
+		postCount: ORDERED_POSTS.length,
+		pageCount: Object.keys(PAGES).length,
+		time: (markB - markA) / MILLISECONDS
+	};
 };
 
 export { getAllPosts };

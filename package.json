@@ -1,7 +1,7 @@
 {
   "name": "journal",
-  "version": "0.1.0",
-  "description": "Journal is a NodeJS blogging platform designed to work with Markdown",
+  "version": "1.0.0",
+  "description": "Journal is a static blog generator designed to work with Markdown",
   "repository": {
     "type": "git",
     "url": "https://github.com/abritinthebay/journal.git"

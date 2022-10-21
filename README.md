@@ -11,14 +11,20 @@ It's small, simple, and fast!
 
 ## Getting Started
 
-Assuming you have [NodeJS](http://nodejs.org) installed already then the first step is installing Journal, this is trivially easy as it's available as an NPM module. Simply run the following command in your Node project folder:
+Assuming you have [NodeJS](http://nodejs.org) installed already then you can just run journal directly through `npx`.
 
 ```Shell
-	npm install journal
+	npx journal
+```
+
+You can also install the binary globally like so:
+
+```Shell
+	npm i -g journal
 ```
 
 # License and Copyright
-Journal is licensed under the MIT licence and is Copyright © 2013-2017 Gregory Wild-Smith.
+Journal is licensed under the MIT licence and is Copyright © 2013-2022 Gregory Wild-Smith.
 
 # Meta
 [![Build Status](https://api.travis-ci.org/abritinthebay/journal.png)](https://travis-ci.org/abritinthebay/journal)
