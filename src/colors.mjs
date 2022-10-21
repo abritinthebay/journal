@@ -26,4 +26,8 @@ export const colors = {
 	BgWhite: "\x1b[47m"
 };
 
+export const color = (text, col) => `${col}${text}${colors.Reset}`;
+
+export const dim = string => color(string, colors.Dim);
+
 export default colors;
