@@ -13,7 +13,6 @@
     ".": "./index.mjs"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "prebuild": "rm -rf ./lib/* && rm -rf ./build/*",
     "prestart": "npm run lint",
     "dev": "npm run build && npx nodemon --experimental-modules --experimental-json-modules index.mjs",
@@ -52,33 +51,33 @@
     "not OperaMini all"
   ],
   "dependencies": {
-    "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13",
-    "hast-util-sanitize": "^4.0.0",
-    "hast-util-to-html": "^8.0.3",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "hast-util-sanitize": "^4.1.0",
+    "hast-util-to-html": "^8.0.4",
     "html-minifier": "^4.0.0",
-    "mdast-util-to-hast": "^12.1.4",
-    "postcss": "^8.4.18",
+    "mdast-util-to-hast": "^12.3.0",
+    "postcss": "^8.4.25",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-atroot": "^0.2.3",
     "postcss-extend-rule": "^4.0.0",
-    "postcss-nested": "^6.0.0",
-    "postcss-preset-env": "^7.8.2",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.0.0",
     "postcss-property-lookup": "^3.0.0",
-    "refractor": "^4.8.0",
+    "refractor": "^4.8.1",
     "remark": "^12.0.1",
     "remark-abbr": "^1.4.1",
-    "remark-emoji": "^2.1.0",
+    "remark-emoji": "^2.2.0",
     "remark-footnotes": "^1.0.0",
     "remark-frontmatter": "^2.0.0",
     "remark-sectionize": "^1.1.1",
-    "remark-slug": "^6.0.0",
-    "unist-builder": "^3.0.0",
-    "unist-util-remove": "^3.1.0",
-    "unist-util-select": "^4.0.1",
+    "remark-slug": "^6.1.0",
+    "unist-builder": "^3.0.1",
+    "unist-util-remove": "^3.1.1",
+    "unist-util-select": "^4.0.3",
     "unist-util-visit": "^4.1.1",
     "yaml": "^2.1.3",
-    "yargs": "^17.6.0"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "eslint": "^8.25.0",
@@ -86,14 +85,13 @@
     "eslint-plugin-compat": "^4.0.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-new-with-error": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-new-with-error": "^4.0.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "eslint-plugin-no-secrets": "^0.8.9",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-promise": "^6.1.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "jest": "^29.2.1"
+    "eslint-plugin-simple-import-sort": "^10.0.0"
   },
   "nodemonConfig": {
     "restartable": "rs",
@@ -121,7 +119,5 @@
     "ext": "mjs,js,json,css,scss,md",
     "events": {}
   },
-  "resolutions": {
-    "trim": "1.0.1"
-  }
+  "resolutions": {}
 }

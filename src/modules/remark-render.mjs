@@ -110,6 +110,7 @@ const footnote = (hast, node) => {
 const processFootnotes = (hast, file) => {
 	if (hast.children) {
 		const { frontmatter } = file.data;
+		// NOTE - need to make sure frontmatter data exists (or is normalized)
 		const prefix = frontmatter.type === "page" || frontmatter.type === "subpage" ? "page" : new Date(frontmatter.date).getTime();
 		const uniq = `${prefix}-${frontmatter.slug}`;
 		const footnoteRefTest = node => node.tagName === "sup" && node.properties.className && node.properties.className.includes("footnote-ref");
